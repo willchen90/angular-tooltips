@@ -47,8 +47,8 @@
           htmlTemplate = htmlTemplate + '<span class="' + CSS_PREFIX + 'close-button" ng-click="hideTooltip()"> ' + closeButtonContent + ' </span>';
         }
 
-        htmlTemplate = htmlTemplate + '<div class="' + CSS_PREFIX + 'title"> ' + INTERPOLATE_START_SYM + 'title' + INTERPOLATE_END_SYM + '</div>' +
-                                      INTERPOLATE_START_SYM + 'content' + INTERPOLATE_END_SYM + ' <span class="' + CSS_PREFIX + 'caret"></span>' +
+        htmlTemplate = htmlTemplate + '<div class="' + CSS_PREFIX + 'title" ng-bind-html="content"> ' + INTERPOLATE_START_SYM + 'title' + INTERPOLATE_END_SYM + '</div>' +
+                                      INTERPOLATE_START_SYM + INTERPOLATE_END_SYM + ' <span class="' + CSS_PREFIX + 'caret"></span>' +
                                       '</div>';
 
         $scope.title = title;
